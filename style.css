@@ -1,0 +1,158 @@
+@font-face {
+  font-family: roboto;
+  font-weight: normal;
+  src: url("roboto.ttf");
+}
+
+@font-face {
+  font-family: roboto;
+  font-weight: bold;
+  src: url("roboto_b.ttf");
+}
+
+
+/* Major stuff */
+body {
+  font-family: roboto, sans-serif;
+}
+
+#wordle_box {
+  width: fit-content;
+  align-items: center;
+  margin: auto auto;
+}
+
+.letter {
+  width: 6vw;
+  height: 6vw;
+  line-height: 6vw;
+  margin: 0.2vw 0.2vw;
+  vertical-align: bottom;
+  display: inline-block;
+  background-color: #000000;
+}
+
+.letter_p { /* P, shorthand for Position */
+  background-color: #6AA74F !important;
+}
+
+.letter_m { /* M, shorthand for Match */
+  background-color: #DFC36D !important;
+}
+
+.letter_n { /* N, shorthand for None */
+  background-color: #666666 !important;
+}
+
+div.letter p {
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+  font-size: 4.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.attempt {
+  width: 100%;
+  display: block;
+  overflow: auto;
+  align-items: center;
+}
+
+div.attempt .index {
+  width: 15%;
+  float: left;
+  font-size: 2.5vw;
+}
+
+div.attempt .content {
+  width: 80%;
+  float: left;
+  height: max-content;
+  display: block;
+}
+
+
+/* Input */
+#guess {
+  width: 95vw;
+  height: 5vw;
+  margin: 0 auto 0 auto;
+  display: block;
+  font-size: 3.8vw;
+}
+
+
+/* Keyboard */
+#keyboard.hidden {
+  max-height: 0;
+}
+
+#keyboard {
+  background-color: #ddd;
+  max-height: 100vh;
+  width: 100%;
+  margin: 0 0;
+  display: initial;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: all 1s ease;
+}
+
+#keyboard .keygroup {
+  margin: 1vw auto;
+  width: fit-content;
+  align-items: center;
+}
+
+#keyboard .keygroup#keygroup1 {
+  width: 88vw;
+  display: flex;
+  padding-left: 10vw;
+}
+
+#keyboard .keygroup#keygroup2 {
+  width: 84vw;
+  display: flex;
+  padding-left: 14vw;
+}
+
+.key#delete {
+  width: 8vw;
+  flex-grow: 1;
+}
+
+.key#enter {
+  width: 11vw;
+  flex-grow: 1;
+}
+
+.key.disabled {
+  border-color: #ffffff;
+  background-color: #eee;
+  color: #000000;
+  cursor: default;
+}
+
+.key {
+  display: inline-block;
+  width: 7vw;
+  height: 10vw;
+  margin: 0vw 0.3vw;
+  line-height: 10vw;
+  border-radius: 1vw;
+  cursor: pointer;
+  background-color: #666666;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 5vw;
+  transition: all 0.2s linear;
+}
+
+#hide {
+  position: fixed;
+  right: 1vw;
+  bottom: 1vw;
+}
